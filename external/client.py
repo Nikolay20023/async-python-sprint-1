@@ -29,7 +29,7 @@ class YandexWeatherAPI:
             return data
         except Exception as ex:
             logger.error(ex)
-            raise Exception(ERR_MESSAGE_TEMPLATE.format(error=ex))
+            raise KeyError(ERR_MESSAGE_TEMPLATE.format(error=ex))
 
     @staticmethod
     def get_forecasting(url: str):
